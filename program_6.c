@@ -43,8 +43,7 @@ int main()
             if(wt[i] > j)
                 dp[i][j] = dp[i-1][j];
             else
-                dp[i][j] = max(dp[i-1][j],
-                               profit[i] + dp[i-1][j-wt[i]]);
+                dp[i][j] = max(dp[i-1][j],profit[i] + dp[i-1][j-wt[i]]);
         }
     }
 
